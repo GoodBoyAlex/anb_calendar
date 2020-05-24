@@ -1,0 +1,265 @@
+/**
+* Имя: CSS для ANB Post List
+* Версия: 1.0
+* Автор: Александр Бабаев
+**/
+/******************************************
+СОДЕРЖАНИЕ:
+1. Контейнер записей.
+2. Контейнер пустого списка записей.
+3. Контейнер блока записи.
+4. Контейнер изображения.
+5. Изображение записи
+6. Контейнер содержания записи.
+7. Заголовок записи.
+8. Дата записи.
+9. Содержание записи.
+10. Кнопка "Читать далее...".
+11. Пагинация.
+12. Контейнер шаблона "image".
+13. Изображение шаблона "image".
+******************************************/
+/* 1. Контейнер записей. */
+.anbplcontainer {
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: center;
+	width: 100%;
+}
+@media (max-width: 768px) {
+	.anbplcontainer{
+		padding: 5px;
+	}
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+	.anbplcontainer{
+		padding: 7px;
+	}
+}
+@media (min-width: 1025px) {
+	.anbplcontainer{
+		padding: 10px;
+	}
+}
+
+/* 2. Контейнер пустого списка записей. */
+.postlistisempty {
+	width: 100;
+	text-align: justify;
+	font-style: italic;
+}
+/* 3. Контейнер блока записи. */
+.anbplblockcontainer {
+	display: -webkit-flex;
+	-webkit-justify-content: flex-start;
+	display: flex;
+	justify-content: flex-start;
+	align-content: space-around;
+	align-items: stretch;
+	flex-wrap: nowrap;
+	width: 100%;
+}
+@media (max-width: 768px) {
+	.anbplblockcontainer {
+		flex-direction: column;
+		padding: 5px;
+	}
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+	.anbplblockcontainer {
+		flex-direction: row;
+		padding: 7px;
+	}
+}
+@media (min-width: 1025px) {
+	.anbplblockcontainer {
+		flex-direction: row;
+		padding: 10px;
+	}
+}
+/* 4. Контейнер изображения. */
+.anbplimgboxcontainer {
+	text-align: center;
+}
+@media (max-width: 768px) {
+	.anbplimgboxcontainer{
+		width: 100%;
+	}
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+	.anbplimgboxcontainer{
+		width: 150px;
+	}
+}
+@media (min-width: 1025px) {
+	.anbplimgboxcontainer{
+		width: 300px;
+	}
+}
+/* 5. Изображение записи. */
+.anbplimg {
+	border-radius: 0;
+}
+@media (max-width: 768px) {
+	.anbplimg {
+		max-height: 100px;
+		max-width: auto;
+		min-width: auto;
+		min-height: 100px;
+		height: 100px;
+		width: auto;
+	}
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+	.anbplimg {
+		max-height: none;
+		max-width: 150px;
+		min-width: 150px;
+		height: auto;
+		width: 150px;
+	}
+}
+@media (min-width: 1025px) {
+	.anbplimg {
+		max-height: none;
+		max-width: 300px;
+		min-width: 300px;
+		height: auto;
+		width: 300px;
+	}
+}
+/* 6. Контейнер содержания записи. */
+.anbplcontentcontainer {
+	text-align: justify;
+	vertical-align: top;
+	width: auto;
+}
+@media (max-width: 768px) {
+	.anbplcontentcontainer {
+		padding-top: 5px;
+	}
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+	.anbplcontentcontainer {
+		padding-left: 5px;
+	}
+}
+@media (min-width: 1025px) {
+	.anbplcontentcontainer {
+		padding-left: 10px;
+	}
+}
+/* 7. Заголовок записи. */
+.anbpltitle {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	white-space: normal;
+	font-weight: 600;
+	font-size: 20px;
+}
+.anbpltitlelink {
+	padding-left: 20px;
+    background-image: url(../images/content/postcontent-link.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+/* 8. Дата записи. */
+.newsdate {
+	font-size: 80%;
+	padding-top: 0px;
+}
+/* 9. Содержание записи. */
+.newscontent {
+	font-size: 100%;
+	text-align: justify;
+	padding-top: 5px;
+}
+/* 10. Кнопка "Читать далее...". */
+.newsmore {
+	text-align: left;
+}
+/* 11. Пагинация. */
+.newspaginator {
+	display: -webkit-flex;
+	-webkit-justify-content: flex-start;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	width: 100%;
+}
+.newspaginator div:first-child{
+	margin-left: 0;
+}
+.npgbutton {
+	background-image: linear-gradient(#6294f7, #6098d5); 
+	border: 1px solid #6294f7;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+	color: #ffffff;
+	margin-left: 7px;
+	padding: 10px;
+	margin: 5px;
+	border-radius: 3px;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Tahoma;
+	text-transform: uppercase;
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	cursor: pointer;
+}
+.npgbutton a{
+	text-decoration: none;
+    color: #ffffff;
+}
+.npgbutton a:hover{
+	text-decoration: none;
+    color: #ffffff;
+}
+.npgbutton a:visited{
+	text-decoration: none;
+    color: #ffffff;
+}
+.npgbutton:hover {
+	background-image: linear-gradient(#1e73be, #fcfcfc);
+	color: #ffffff;
+	text-shadow: 0px 0px 2px #1e73be, 0px 0px 1px #1e73be, 0px 0px 4px #1e73be;
+}
+.npgbutton:active {
+	background-image: linear-gradient(#1e73be, #e9e9e9);
+	color: #ffffff;
+	text-shadow: 0px 0px 2px #1e73be, 0px 0px 1px #1e73be, 0px 0px 4px #1e73be;
+	box-shadow: 0px 1px 0px 0px #1e73be inset;
+}
+.npgselbutton {
+	background-image: linear-gradient(#1e73be, #fcfcfc); 
+	cursor: default;
+}
+.npgtable {
+    width: auto !important;
+    margin: auto;
+}
+/* 12. Контейнер шаблона "image". */
+.fullimgcontainer {
+	width: 100%;
+}
+/* 13. Изображение шаблона "image". */
+.newsimgfull {
+	width: 100%;
+	height: auto;
+}
